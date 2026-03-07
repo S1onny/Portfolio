@@ -1,13 +1,79 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Sonny — Frontend Developer</title>
   </head>
-  <body>
-    <div id="app"></div>
+
+  <body class="antialiased bg-gray-950 text-gray-100 min-h-screen">
+    <main id="app" class="container mx-auto px-4 pt-24">
+      <header>
+        <nav
+          class="fixed justify-self-center top-0 left-0 right-0 z-50 bg-gray-400/20 rounded-xl container mt-3 border-solid border-white/20 border shadow-md shadow-white/15"
+        >
+          <div
+            class="max-full mx-auto px-6 lg:px-8 py-4 flex items-center justify-between"
+          >
+            <a href="#home" class="flex items-center gap-3 group">
+              <div
+                class="w-10 h-10 rounded-full bg-linear-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-110 transition-transform"
+              >
+                S
+              </div>
+              <span
+                class="text-2xl font-bold bg-linear-to-r from-violet-300 via-violet-400 to-purple-500 bg-clip-text text-transparent group-hover:brightness-125 transition-all"
+              >
+                Sonny
+              </span>
+            </a>
+            <ul class="hidden md:flex items-center gap-8 lg:gap-12">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-300 hover:text-violet-300 text-2xl font-medium transition-colors duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-300 hover:text-violet-300 text-2xl font-medium transition-colors duration-300"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-gray-300 hover:text-violet-300 text-2xl font-medium transition-colors duration-300"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-300 hover:text-violet-300 text-2xl font-medium transition-colors duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+
+            <!-- Бургер на мобильном -->
+            <button
+              class="md:hidden text-violet-400 text-3xl focus:outline-none"
+            >
+              ☰
+            </button>
+          </div>
+        </nav>
+      </header>
+      <h2 class="text-4xl font-bold text-violet-400 mt-12 mb-6">
+        Добро пожаловать
+      </h2>
+      <p class="text-xl">
+        Это тестовая зона. Если навбар сверху появился — include сработал.
+      </p>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
