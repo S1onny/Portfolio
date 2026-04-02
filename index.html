@@ -6,53 +6,49 @@
     <title>Sonny — Frontend Developer</title>
   </head>
 
-  <body class="antialiased bg-gray-950 text-gray-100 min-h-screen">
+  <body class="antialiased bg-gray-950 text-gray-100">
     <main id="app" class="container mx-auto px-4 pt-24">
+      <!-- Хедер -->
       <header>
         <nav
           class="fixed justify-self-center top-0 left-0 right-0 z-50 bg-gray-400/20 rounded-xl container mt-3 border-solid border-white/20 border shadow-md shadow-white/15"
         >
           <div
-            class="max-full mx-auto px-6 lg:px-8 py-4 flex items-center justify-between"
+            class="max-full mx-auto px-6 lg:px-8 py-2 flex items-center justify-between"
           >
-            <a href="#home" class="flex items-center gap-3 group">
-              <div
-                class="w-10 h-10 rounded-full bg-linear-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:scale-110 transition-transform"
-              >
-                S
-              </div>
-              <span
-                class="text-2xl font-bold bg-linear-to-r from-violet-300 via-violet-400 to-purple-500 bg-clip-text text-transparent group-hover:brightness-125 transition-all"
-              >
-                Sonny
-              </span>
+            <a href="#About">
+              <img
+                src="/src/images/logo.jpg"
+                alt="Logo"
+                class="h-14 w-14 rounded"
+              />
             </a>
             <ul class="hidden md:flex items-center gap-8 lg:gap-12">
               <li>
                 <a
-                  href="#home"
-                  class="text-gray-300 hover:text-violet-300 text-2xl font-medium transition-colors duration-300"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="text-gray-300 hover:text-violet-300 text-2xl font-medium transition-colors duration-300"
+                  href="#About"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
                   >About</a
                 >
               </li>
               <li>
                 <a
+                  href="#skills"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
                   href="#projects"
-                  class="text-gray-300 hover:text-violet-300 text-2xl font-medium transition-colors duration-300"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
                   >Projects</a
                 >
               </li>
               <li>
                 <a
                   href="#contact"
-                  class="text-gray-300 hover:text-violet-300 text-2xl font-medium transition-colors duration-300"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
                   >Contact</a
                 >
               </li>
@@ -67,122 +63,566 @@
           </div>
         </nav>
       </header>
+      <!-- Обо мне -->
       <section
-        id="home"
+        id="About"
         class="min-h-screen flex items-center relative overflow-hidden"
       >
-        <div class="relative z-10 mx-auto">
-          <div
-            class="bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl shadow-violet-950/40"
-          >
-            <div
-              class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16"
-            >
-              <!-- Фото слева (круглое, как в наших предыдущих обсуждениях) -->
+        <div
+          class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl shadow-violet-950/40"
+        >
+          <div class="flex items-center gap-12 lg:gap-16">
+            <div class="flex flex-col items-center">
               <div
-                class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-violet-500/50 shadow-xl shadow-violet-900/50 flex-shrink-0"
+                class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-violet-500/50 shadow-xl shadow-violet-900/50 shrink-0"
               >
                 <img
-                  src="/images/me-night.jpg"
+                  src="/src/images/avaPng.png"
                   alt="Sonny"
-                  class="w-full h-full object-cover"
+                  class="w-full h-full object-cover -rotate-20"
                 />
               </div>
-
-              <!-- Текст справа (Hero + About в одном) -->
-              <div class="text-center lg:text-left">
+              <div>
                 <h1
                   class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6"
                 >
                   <span
-                    class="bg-gradient-to-r from-violet-400 via-violet-500 to-purple-600 bg-clip-text text-transparent drop-shadow-xl"
+                    class="bg-linear-to-r from-violet-400 via-violet-500 to-purple-600 bg-clip-text text-transparent drop-shadow-xl"
                   >
-                    Sonny
+                    Михаил
                   </span>
                 </h1>
 
                 <p
                   class="text-xl sm:text-2xl md:text-3xl text-gray-300 font-light mb-6"
                 >
-                  Frontend Developer • Helsinki
+                  Frontend Developer
+                </p>
+              </div>
+            </div>
+
+            <!-- Текст справа (Hero + About в одном) -->
+            <div class="text-center lg:text-left flex flex-col gap-20">
+              <div>
+                <p
+                  class="text-lg md:text-2xl text-gray-300 max-w-full mx-auto lg:mx-0 mb-10 leading-relaxed"
+                >
+                  Привет! Я frontend-разработчик, который глубоко погружён в
+                  создание современных цифровых интерфейсов. Специализируюсь на
+                  разработке чистого, семантически правильного и
+                  высокопроизводительного кода.
                 </p>
 
                 <p
-                  class="text-lg md:text-xl text-gray-400 max-w-3xl mb-10 leading-relaxed"
+                  class="text-lg md:text-2xl text-gray-300 max-w-full mx-auto lg:mx-0 mb-10 leading-relaxed"
                 >
-                  Привет! Я Sonny — frontend-разработчик из Хельсинки. Создаю
-                  современные, быстрые и доступные интерфейсы с любовью к
-                  Tailwind, чистому коду и минимализму. Пока опыта коммерческого
-                  немного, но много личных проектов, энтузиазма и желания расти.
+                  Для меня важно не просто «сделать красиво», а построить
+                  действительно удобный и масштабируемый продукт. Я тщательно
+                  прорабатываю архитектуру интерфейсов, оптимизирую
+                  производительность, обеспечиваю отличную доступность и уделяю
+                  большое внимание мелочам, которые формируют общее впечатление
+                  пользователя.
                 </p>
 
-                <!-- Навыки (маленькие стеклянные теги) -->
-                <div
-                  class="flex flex-wrap gap-3 justify-center lg:justify-start mb-10"
+                <p
+                  class="text-lg md:text-2xl text-gray-300 max-w-full mx-auto lg:mx-0 leading-relaxed"
                 >
+                  Постоянно совершенствую свои навыки, экспериментирую с новыми
+                  подходами и стремлюсь к тому, чтобы каждый созданный мной
+                  интерфейс был не только функциональным, но и приносил
+                  настоящее удовольствие при использовании.
+                </p>
+              </div>
+              <!-- Кнопки CTA -->
+              <div class="flex gap-20 justify-center">
+                <a
+                  href="#projects"
+                  class="px-18 py-6 text-2xl bg-violet-600/70 backdrop-blur-md border border-violet-500/40 text-white font-medium rounded-xl transition-all hover:bg-violet-500 hover:scale-105 hover:shadow-xl hover:shadow-violet-700/40"
+                >
+                  Посмотреть проекты
+                </a>
+                <a
+                  href="#contact"
+                  class="px-18 py-6 text-2xl bg-gray-800/40 backdrop-blur-lg border border-gray-600/40 text-violet-300 font-medium rounded-xl transition-all hover:bg-gray-700/50 hover:border-violet-500/60 hover:text-violet-200"
+                >
+                  Связаться
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Skills секция -->
+      <section
+        id="skills"
+        class="min-h-screen flex items-center justify-center"
+      >
+        <div class="w-full">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-black mb-4">
+              <span
+                class="bg-gradient-to-r from-violet-400 to-purple-600 bg-clip-text text-transparent"
+              >
+                Skills
+              </span>
+            </h2>
+            <p class="text-gray-400 text-lg">
+              Технологии, с которыми я работаю
+            </p>
+          </div>
+
+          <!-- Общая большая стеклянная обертка -->
+          <div
+            class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl shadow-violet-950/40"
+          >
+            <ul class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <li
+                class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+              >
+                <div class="text-4xl mb-4">🌐</div>
+                <h3 class="font-semibold text-2xl">HTML5</h3>
+                <p class="text-gray-400 text-xl mt-2">
+                  Семантическая вёрстка и доступность
+                </p>
+              </li>
+
+              <li
+                class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+              >
+                <div class="text-4xl mb-4">🎨</div>
+                <h3 class="font-semibold text-2xl">CSS3 / SCSS</h3>
+                <p class="text-gray-400 text-xl mt-2">
+                  Препроцессоры и современный CSS
+                </p>
+              </li>
+
+              <li
+                class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+              >
+                <div class="text-4xl mb-4">🟨</div>
+                <h3 class="font-semibold text-2xl">JavaScript</h3>
+                <p class="text-gray-400 text-xl mt-2">
+                  ES6+, DOM, асинхронность, API
+                </p>
+              </li>
+
+              <li
+                class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+              >
+                <div class="text-4xl mb-4">🌬️</div>
+                <h3 class="font-semibold text-2xl">Tailwind CSS</h3>
+                <p class="text-gray-400 text-xl mt-2">Utility-first подход</p>
+              </li>
+
+              <li
+                class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+              >
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="font-semibold text-2xl">Vite</h3>
+                <p class="text-gray-400 text-xl mt-2">
+                  Быстрая сборка и разработка
+                </p>
+              </li>
+
+              <li
+                class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+              >
+                <div class="text-4xl mb-4">🧹</div>
+                <h3 class="font-semibold text-2xl">ESLint + Prettier</h3>
+                <p class="text-gray-400 text-xl mt-2">
+                  Качество кода и форматирование
+                </p>
+              </li>
+
+              <li
+                class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+              >
+                <div class="text-4xl mb-4">📦</div>
+                <h3 class="font-semibold text-2xl">Git & GitHub</h3>
+                <p class="text-gray-400 text-xl mt-2">Версионный контроль</p>
+              </li>
+
+              <li
+                class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+              >
+                <div class="text-4xl mb-4">🔧</div>
+                <h3 class="font-semibold text-2xl">WordPress</h3>
+                <p class="text-gray-400 text-xl mt-2">
+                  Создание и кастомизация сайтов
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Проекты -->
+      <section
+        id="projects"
+        class="min-h-screen flex items-center justify-center"
+      >
+        <div class="container mx-auto px-6 max-w-6xl">
+          <h2 class="text-4xl md:text-5xl font-black text-center mb-16">
+            <span
+              class="bg-linear-to-r from-violet-400 to-purple-600 bg-clip-text text-transparent"
+            >
+              Projects
+            </span>
+          </h2>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Карточка проекта 1 -->
+            <div
+              class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+            >
+              <div
+                class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+              >
+                [Скриншот проекта 1]
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Название проекта 1</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                  Краткое описание. Что делал, какие технологии использовал,
+                  какой был вызов.
+                </p>
+                <div class="flex gap-2 flex-wrap">
                   <span
-                    class="px-5 py-2 bg-violet-900/40 backdrop-blur-sm border border-violet-600/30 rounded-full text-violet-300 text-sm font-medium"
-                    >Tailwind CSS</span
+                    class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                    >Tailwind</span
                   >
                   <span
-                    class="px-5 py-2 bg-violet-900/40 backdrop-blur-sm border border-violet-600/30 rounded-full text-violet-300 text-sm font-medium"
+                    class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
                     >JavaScript</span
                   >
+                </div>
+                <div class="flex gap-4 mt-6">
+                  <a
+                    href="#"
+                    class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                  >
+                    Live Demo →
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                  >
+                    GitHub →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Карточка проекта 2 (повтори блок, измени текст и скриншот) -->
+            <div
+              class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+            >
+              <div
+                class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+              >
+                [Скриншот проекта 2]
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Название проекта 2</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                  Краткое описание второго проекта.
+                </p>
+                <div class="flex gap-2 flex-wrap">
                   <span
-                    class="px-5 py-2 bg-violet-900/40 backdrop-blur-sm border border-violet-600/30 rounded-full text-violet-300 text-sm font-medium"
+                    class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                    >React</span
+                  >
+                  <span
+                    class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                    >Tailwind</span
+                  >
+                </div>
+                <div class="flex gap-4 mt-6">
+                  <a
+                    href="#"
+                    class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                  >
+                    Live Demo →
+                  </a>
+                  <a
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                  >
+                    GitHub →
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Карточка проекта 3 -->
+            <div
+              class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+            >
+              <div
+                class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+              >
+                [Скриншот проекта 3]
+              </div>
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Название проекта 3</h3>
+                <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                  Краткое описание третьего проекта.
+                </p>
+                <div class="flex gap-2 flex-wrap">
+                  <span
+                    class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
                     >Vite</span
                   >
                   <span
-                    class="px-5 py-2 bg-violet-900/40 backdrop-blur-sm border border-violet-600/30 rounded-full text-violet-300 text-sm font-medium"
-                    >Responsive</span
-                  >
-                  <span
-                    class="px-5 py-2 bg-violet-900/40 backdrop-blur-sm border border-violet-600/30 rounded-full text-violet-300 text-sm font-medium"
-                    >Git</span
+                    class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                    >JavaScript</span
                   >
                 </div>
-
-                <!-- Кнопки CTA -->
-                <div
-                  class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start"
-                >
+                <div class="flex gap-4 mt-6">
                   <a
-                    href="#projects"
-                    class="px-8 py-4 bg-violet-600/70 backdrop-blur-md border border-violet-500/40 text-white font-medium rounded-xl transition-all hover:bg-violet-500 hover:scale-105 hover:shadow-xl hover:shadow-violet-700/40"
+                    href="#"
+                    class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
                   >
-                    Посмотреть проекты
+                    Live Demo →
                   </a>
                   <a
-                    href="#contact"
-                    class="px-8 py-4 bg-gray-800/40 backdrop-blur-lg border border-gray-600/40 text-violet-300 font-medium rounded-xl transition-all hover:bg-gray-700/50 hover:border-violet-500/60 hover:text-violet-200"
+                    href="#"
+                    class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
                   >
-                    Связаться
+                    GitHub →
                   </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <!-- Контакты -->
+      <section
+        id="contact"
+        class="min-h-screen flex items-center justify-center"
+      >
+        <div class="container mx-auto px-6 max-w-4xl">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-black mb-4">
+              <span
+                class="bg-linear-to-r from-violet-400 to-purple-600 bg-clip-text text-transparent"
+              >
+                Get In Touch
+              </span>
+            </h2>
+            <p class="text-gray-400 text-lg max-w-md mx-auto">
+              Хочешь обсудить проект или просто поболтать — пиши мне!
+            </p>
+          </div>
 
-        <!-- Стрелка вниз (чтобы показать, что дальше есть контент) -->
-        <div
-          class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block"
-        >
-          <svg
-            class="w-10 h-10 text-violet-400/60"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          <div
+            class="bg-gray-900/30 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-10 md:p-16 shadow-2xl shadow-violet-950/30"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 14l-7 7m0 0l-7-7m7 7V3"
-            />
-          </svg>
+            <div class="grid md:grid-cols-2 gap-12">
+              <!-- Левая колонка - информация -->
+              <div>
+                <h3 class="text-2xl font-semibold mb-8 text-violet-300">
+                  Контакты
+                </h3>
+
+                <div class="space-y-8">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-11 h-11 rounded-2xl bg-violet-900/40 flex items-center justify-center text-2xl shrink-0"
+                    >
+                      ✉️
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-400">Email</p>
+                      <a
+                        href="mailto:твой@email.com"
+                        class="text-lg text-violet-300 hover:text-violet-200 transition-colors"
+                      >
+                        твой@email.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-11 h-11 rounded-2xl bg-violet-900/40 flex items-center justify-center text-2xl shrink-0"
+                    >
+                      📍
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-400">Локация</p>
+                      <p class="text-lg">Хельсинки, Финляндия</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="w-11 h-11 rounded-2xl bg-violet-900/40 flex items-center justify-center text-2xl shrink-0"
+                    >
+                      💼
+                    </div>
+                    <div>
+                      <p class="text-sm text-gray-400">Telegram</p>
+                      <a
+                        href="https://t.me/твой_ник"
+                        class="text-lg text-violet-300 hover:text-violet-200 transition-colors"
+                      >
+                        @твой_ник
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Социальные сети -->
+                <div class="mt-12">
+                  <p class="text-sm text-gray-400 mb-4">
+                    Или найди меня здесь:
+                  </p>
+                  <div class="flex gap-5">
+                    <a
+                      href="#"
+                      class="w-11 h-11 bg-gray-800/50 hover:bg-violet-900/40 transition-colors rounded-2xl flex items-center justify-center text-2xl"
+                      >🐙</a
+                    >
+                    <a
+                      href="#"
+                      class="w-11 h-11 bg-gray-800/50 hover:bg-violet-900/40 transition-colors rounded-2xl flex items-center justify-center text-2xl"
+                      >💼</a
+                    >
+                    <a
+                      href="#"
+                      class="w-11 h-11 bg-gray-800/50 hover:bg-violet-900/40 transition-colors rounded-2xl flex items-center justify-center text-2xl"
+                      >𝕏</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Правая колонка - форма -->
+              <div>
+                <form class="space-y-6">
+                  <div>
+                    <label class="block text-sm text-gray-400 mb-2">Имя</label>
+                    <input
+                      type="text"
+                      class="w-full bg-gray-950/50 border border-gray-700/50 rounded-2xl px-6 py-4 focus:outline-none focus:border-violet-500 transition-colors"
+                      placeholder="Твоё имя"
+                    />
+                  </div>
+
+                  <div>
+                    <label class="block text-sm text-gray-400 mb-2"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="w-full bg-gray-950/50 border border-gray-700/50 rounded-2xl px-6 py-4 focus:outline-none focus:border-violet-500 transition-colors"
+                      placeholder="твой@email.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label class="block text-sm text-gray-400 mb-2"
+                      >Сообщение</label
+                    >
+                    <textarea
+                      rows="5"
+                      class="w-full bg-gray-950/50 border border-gray-700/50 rounded-3xl px-6 py-4 focus:outline-none focus:border-violet-500 transition-colors resize-y"
+                      placeholder="Напиши мне..."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full bg-violet-600 hover:bg-violet-500 py-5 rounded-2xl font-medium text-lg transition-all active:scale-95"
+                  >
+                    Отправить сообщение
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <!-- Футер -->
+      <footer
+        class="bg-gray-950/80 backdrop-blur-xl border-t border-gray-700/30 py-12 md:py-16 w-full absolute left-0"
+      >
+        <div class="mx-auto px-6 container">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-10"
+          >
+            <!-- Левая часть -->
+            <div class="flex items-center gap-4">
+              <div
+                class="w-9 h-9 rounded-2xl bg-linear-to-r from-violet-500 to-purple-600 flex items-center justify-center text-white font-bold"
+              >
+                S
+              </div>
+              <div>
+                <p class="font-semibold text-lg">Sonny</p>
+                <p class="text-sm text-gray-400">
+                  Frontend Developer • Helsinki
+                </p>
+              </div>
+            </div>
+
+            <!-- Центральные ссылки -->
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm">
+              <a
+                href="#home"
+                class="text-gray-400 hover:text-violet-300 transition-colors"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="text-gray-400 hover:text-violet-300 transition-colors"
+                >About</a
+              >
+              <a
+                href="#projects"
+                class="text-gray-400 hover:text-violet-300 transition-colors"
+                >Projects</a
+              >
+              <a
+                href="#contact"
+                class="text-gray-400 hover:text-violet-300 transition-colors"
+                >Contact</a
+              >
+            </div>
+
+            <!-- Социальные сети и копирайт -->
+            <div class="flex flex-col items-center md:items-end gap-4">
+              <div class="flex gap-6 text-2xl">
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-violet-400 transition-colors"
+                  >🐙</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-violet-400 transition-colors"
+                  >💼</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-violet-400 transition-colors"
+                  >𝕏</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-violet-400 transition-colors"
+                  >✉️</a
+                >
+              </div>
+
+              <p class="text-xs text-gray-500">
+                © 2026 Sonny. Все права защищены.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>
