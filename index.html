@@ -22,6 +22,13 @@
             <ul class="hidden md:flex items-center gap-8 lg:gap-12">
               <li>
                 <a
+                  href="#Hero"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
                   href="#About"
                   class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
                   >About</a
@@ -64,91 +71,201 @@
       <div id="scroll-container" class="h-full pt-24 overflow-auto">
         <!-- Container для ограничения ширины -->
         <div class="container mx-auto">
-          <!-- About -->
+          <!-- HERO SECTION -->
           <section
-            id="About"
-            class="min-h-screen flex items-center relative overflow-hidden"
+            id="Hero"
+            class="h-[calc(100dvh-var(--header-height))] flex items-center relative"
           >
-            <div
-              class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl shadow-violet-950/40"
-            >
-              <div class="flex items-center gap-12 lg:gap-16">
-                <div class="flex flex-col items-center">
-                  <div
-                    class="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-violet-500/50 shadow-xl shadow-violet-900/50 shrink-0"
+            <div class="w-full mx-auto px-6 lg:px-8">
+              <div
+                class="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-16 lg:gap-20 h-full"
+              >
+                <!-- Левая часть — текст -->
+                <div
+                  class="flex-1 text-center lg:text-left max-w-lg lg:max-w-none"
+                >
+                  <h1
+                    class="text-5xl sm:text-6xl lg:text-9xl font-bold leading-none tracking-tight text-white"
                   >
-                    <img
-                      src="/src/images/avaPng.png"
-                      alt="Sonny"
-                      class="w-full h-full object-cover -rotate-20 -translate-x-4 translate-y-2"
-                    />
-                  </div>
-                  <div>
-                    <h1
-                      class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-6"
-                    >
-                      <span
-                        class="bg-linear-to-r from-violet-400 via-violet-500 to-purple-600 bg-clip-text text-transparent drop-shadow-xl"
-                      >
-                        Михаил
-                      </span>
-                    </h1>
+                    Привет,<br />
+                    Я
+                    <span
+                      class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent"
+                      >Михаил</span
+                    >.
+                  </h1>
 
-                    <p
-                      class="text-xl sm:text-2xl md:text-3xl text-gray-300 font-light mb-6"
-                    >
-                      Frontend Developer
-                    </p>
-                  </div>
-                </div>
+                  <p class="mt-4 text-5xl sm:text-6xl text-gray-300 font-light">
+                    Frontend Developer
+                  </p>
 
-                <!-- Текст справа (Hero + About в одном) -->
-                <div class="text-center lg:text-left flex flex-col gap-20">
-                  <div>
-                    <p
-                      class="text-lg md:text-2xl text-gray-300 max-w-full mx-auto lg:mx-0 mb-10 leading-relaxed"
-                    >
-                      Привет! Я frontend-разработчик, который глубоко погружён в
-                      создание современных цифровых интерфейсов. Специализируюсь
-                      на разработке чистого, семантически правильного и
-                      высокопроизводительного кода.
-                    </p>
+                  <p
+                    class="mt-8 text-base sm:text-2xl max-w-2/3 text-gray-400 leading-relaxed"
+                  >
+                    Создаю современные цифровые интерфейсы, которые не просто
+                    красивы, а действительно удобны, быстры и приносят
+                    удовольствие пользователям.
+                  </p>
 
-                    <p
-                      class="text-lg md:text-2xl text-gray-300 max-w-full mx-auto lg:mx-0 mb-10 leading-relaxed"
-                    >
-                      Для меня важно не просто «сделать красиво», а построить
-                      действительно удобный и масштабируемый продукт. Я
-                      тщательно прорабатываю архитектуру интерфейсов,
-                      оптимизирую производительность, обеспечиваю отличную
-                      доступность и уделяю большое внимание мелочам, которые
-                      формируют общее впечатление пользователя.
-                    </p>
-
-                    <p
-                      class="text-lg md:text-2xl text-gray-300 max-w-full mx-auto lg:mx-0 leading-relaxed"
-                    >
-                      Постоянно совершенствую свои навыки, экспериментирую с
-                      новыми подходами и стремлюсь к тому, чтобы каждый
-                      созданный мной интерфейс был не только функциональным, но
-                      и приносил настоящее удовольствие при использовании.
-                    </p>
-                  </div>
-                  <!-- Кнопки CTA -->
-                  <div class="flex gap-20 justify-center">
+                  <!-- Кнопки -->
+                  <div
+                    class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                  >
                     <a
                       href="#projects"
-                      class="px-18 py-6 text-2xl bg-violet-600/70 backdrop-blur-md border border-violet-500/40 text-white font-medium rounded-xl transition-all hover:bg-violet-500 hover:scale-105 hover:shadow-xl hover:shadow-violet-700/40"
+                      class="px-11 py-5.5 bg-violet-600 hover:bg-violet-700 transition-all rounded-2xl font-medium text-2xl text-center"
                     >
                       Посмотреть проекты
                     </a>
+
                     <a
                       href="#contact"
-                      class="px-18 py-6 text-2xl bg-gray-800/40 backdrop-blur-lg border border-gray-600/40 text-violet-300 font-medium rounded-xl transition-all hover:bg-gray-700/50 hover:border-violet-500/60 hover:text-violet-200"
+                      class="px-11 py-5.5 border border-violet-400/70 hover:bg-violet-500/10 hover:border-violet-400 transition-all rounded-2xl font-medium text-2xl text-center"
                     >
-                      Связаться
+                      Связаться со мной
                     </a>
                   </div>
+
+                  <!-- Теги навыков -->
+                  <div
+                    class="mt-12 flex flex-wrap gap-3 justify-center lg:justify-start"
+                  >
+                    <span
+                      class="px-5 py-2 text-sm bg-white/5 border border-white/10 rounded-full text-gray-400"
+                      >Tailwind CSS</span
+                    >
+                    <span
+                      class="px-5 py-2 text-sm bg-white/5 border border-white/10 rounded-full text-gray-400"
+                      >JavaScript</span
+                    >
+                    <span
+                      class="px-5 py-2 text-sm bg-white/5 border border-white/10 rounded-full text-gray-400"
+                      >Clean Code</span
+                    >
+                    <span
+                      class="px-5 py-2 text-sm bg-white/5 border border-white/10 rounded-full text-gray-400"
+                      >Performance</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Правая часть — аватарка -->
+                <div class="shrink-0 relative">
+                  <div
+                    class="w-72 h-72 sm:w-100 sm:h-100 mx-auto flex items-center justify-center relative"
+                  >
+                    <!-- Неоновое свечение -->
+                    <div
+                      class="absolute -inset-10 bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-400 rounded-full opacity-20 blur-3xl"
+                    ></div>
+
+                    <!-- Круг аватарки -->
+                    <div
+                      class="w-48 h-48 md:w-64 md:h-64 lg:w-100 lg:h-100 rounded-full overflow-hidden border-4 border-violet-500/50 shadow-xl shadow-violet-900/50 shrink-0 flex items-center justify-center"
+                    >
+                      <img
+                        src="/src/images/avaPng.png"
+                        alt="Sonny"
+                        class="w-full h-full object-cover -rotate-20 -translate-x-4 translate-y-2"
+                      />
+                      <div
+                        class="absolute right-0 bottom-0 bg-[#111118] border border-violet-500/50 px-6 py-3 rounded-3xl text-sm font-medium shadow-xl"
+                      >
+                        Open to opportunities
+                      </div>
+                    </div>
+
+                    <!-- Бейдж "Open to opportunities" -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Скролл индикатор -->
+            <div
+              class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-10"
+            >
+              <span class="text-xs tracking-[3px] text-gray-500 font-mono"
+                >SCROLL TO EXPLORE</span
+              >
+              <div
+                class="w-px h-12 bg-gradient-to-b from-transparent via-violet-500 to-transparent mt-2"
+              ></div>
+            </div>
+          </section>
+          <!-- ABOUT SECTION -->
+          <section id="About" class="py-24">
+            <div
+              class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl shadow-violet-950/40"
+            >
+              <div class="text-center mb-16">
+                <h2
+                  class="text-4xl lg:text-5xl font-bold tracking-tight text-white"
+                >
+                  Обо мне
+                </h2>
+                <div class="h-px w-16 bg-violet-500 mx-auto mt-6"></div>
+              </div>
+
+              <div
+                class="mx-auto space-y-10 text-2xl max-w-3/4 leading-relaxed text-gray-300 text-center"
+              >
+                <p>
+                  Я frontend-разработчик, глубоко погружённый в создание
+                  современных цифровых интерфейсов. Специализируюсь на написании
+                  чистого, семантически правильного и высокопроизводительного
+                  кода.
+                </p>
+
+                <p>
+                  Для меня важно не просто «сделать красиво». Я стремлюсь
+                  строить действительно удобные и масштабируемые продукты.
+                  Тщательно прорабатываю архитектуру интерфейсов, оптимизирую
+                  производительность, обеспечиваю отличную доступность и уделяю
+                  большое внимание мелочам, которые формируют общее впечатление
+                  пользователя.
+                </p>
+
+                <p>
+                  Постоянно совершенствую свои навыки, экспериментирую с новыми
+                  подходами и инструментами. Моя цель — чтобы каждый интерфейс,
+                  созданный мной, был не только функциональным, но и приносил
+                  настоящее удовольствие при использовании.
+                </p>
+              </div>
+
+              <!-- Небольшой блок с ключевыми принципами -->
+              <div
+                class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"
+              >
+                <div class="bg-[#111118] border border-white/5 rounded-3xl p-8">
+                  <div class="text-violet-400 text-xl mb-3">01</div>
+                  <h3 class="font-semibold text-white mb-2">Чистый код</h3>
+                  <p class="text-gray-400 text-sm">
+                    Пишу читаемый, поддерживаемый и масштабируемый код.
+                  </p>
+                </div>
+
+                <div class="bg-[#111118] border border-white/5 rounded-3xl p-8">
+                  <div class="text-violet-400 text-xl mb-3">02</div>
+                  <h3 class="font-semibold text-white mb-2">
+                    Внимание к деталям
+                  </h3>
+                  <p class="text-gray-400 text-sm">
+                    Мелочи, которые многие упускают, часто определяют качество
+                    продукта.
+                  </p>
+                </div>
+
+                <div class="bg-[#111118] border border-white/5 rounded-3xl p-8">
+                  <div class="text-violet-400 text-xl mb-3">03</div>
+                  <h3 class="font-semibold text-white mb-2">
+                    Пользователь на первом месте
+                  </h3>
+                  <p class="text-gray-400 text-sm">
+                    Создаю интерфейсы, которые решают задачи и приносят
+                    удовольствие.
+                  </p>
                 </div>
               </div>
             </div>
@@ -156,7 +273,7 @@
           <!-- skills -->
           <section
             id="skills"
-            class="min-h-screen flex items-center justify-center"
+            class="h-[calc(100dvh-var(--header-height))] flex items-center justify-center relative"
           >
             <div class="w-full">
               <div class="text-center mb-16">
@@ -261,11 +378,21 @@
                 </ul>
               </div>
             </div>
+            <div
+              class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-10"
+            >
+              <span class="text-xs tracking-[3px] text-gray-500 font-mono"
+                >SCROLL TO EXPLORE</span
+              >
+              <div
+                class="w-px h-12 bg-gradient-to-b from-transparent via-violet-500 to-transparent mt-2"
+              ></div>
+            </div>
           </section>
           <!--  projects -->
           <section
             id="projects"
-            class="min-h-screen flex items-center justify-center"
+            class="h-[calc(100dvh-var(--header-height))] flex items-center justify-center relative"
           >
             <div class="container mx-auto px-6 max-w-6xl">
               <h2 class="text-4xl md:text-5xl font-black text-center mb-16">
@@ -276,238 +403,252 @@
                 </span>
               </h2>
 
-              <div class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl py-8 md:py-12 lg:py-16 shadow-2xl shadow-violet-950/40">
-            <div class="swiper flex flex-row">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                  <!-- Slides -->
-                  <div class="swiper-slide">
-                    <div
-                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group my-auto"
-                    >
+              <div
+                class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl py-8 md:py-12 lg:py-16 shadow-2xl shadow-violet-950/40"
+              >
+                <div class="swiper flex flex-row">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
                       <div
-                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+                        class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group my-auto"
                       >
-                        [Скриншот проекта 1]
-                      </div>
-                      <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">
-                          Название проекта 1
-                        </h3>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-                          Краткое описание. Что делал, какие технологии
-                          использовал, какой был вызов.
-                        </p>
-                        <div class="flex gap-2 flex-wrap">
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >Tailwind</span
-                          >
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >JavaScript</span
-                          >
+                        <div
+                          class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+                        >
+                          [Скриншот проекта 1]
                         </div>
-                        <div class="flex gap-4 mt-6">
-                          <a
-                            href="#"
-                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            Live Demo →
-                          </a>
-                          <a
-                            href="#"
-                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            GitHub →
-                          </a>
+                        <div class="p-6">
+                          <h3 class="text-xl font-semibold mb-2">
+                            Название проекта 1
+                          </h3>
+                          <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Краткое описание. Что делал, какие технологии
+                            использовал, какой был вызов.
+                          </p>
+                          <div class="flex gap-2 flex-wrap">
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >Tailwind</span
+                            >
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >JavaScript</span
+                            >
+                          </div>
+                          <div class="flex gap-4 mt-6">
+                            <a
+                              href="#"
+                              class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              Live Demo →
+                            </a>
+                            <a
+                              href="#"
+                              class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              GitHub →
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div
+                        class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+                      >
+                        <div
+                          class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+                        >
+                          [Скриншот проекта 2]
+                        </div>
+                        <div class="p-6">
+                          <h3 class="text-xl font-semibold mb-2">
+                            Название проекта 2
+                          </h3>
+                          <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Краткое описание второго проекта.
+                          </p>
+                          <div class="flex gap-2 flex-wrap">
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >React</span
+                            >
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >Tailwind</span
+                            >
+                          </div>
+                          <div class="flex gap-4 mt-6">
+                            <a
+                              href="#"
+                              class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              Live Demo →
+                            </a>
+                            <a
+                              href="#"
+                              class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              GitHub →
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div
+                        class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+                      >
+                        <div
+                          class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+                        >
+                          [Скриншот проекта 3]
+                        </div>
+                        <div class="p-6">
+                          <h3 class="text-xl font-semibold mb-2">
+                            Название проекта 2
+                          </h3>
+                          <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Краткое описание второго проекта.
+                          </p>
+                          <div class="flex gap-2 flex-wrap">
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >React</span
+                            >
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >Tailwind</span
+                            >
+                          </div>
+                          <div class="flex gap-4 mt-6">
+                            <a
+                              href="#"
+                              class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              Live Demo →
+                            </a>
+                            <a
+                              href="#"
+                              class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              GitHub →
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div
+                        class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+                      >
+                        <div
+                          class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+                        >
+                          [Скриншот проекта 4]
+                        </div>
+                        <div class="p-6">
+                          <h3 class="text-xl font-semibold mb-2">
+                            Название проекта 2
+                          </h3>
+                          <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Краткое описание второго проекта.
+                          </p>
+                          <div class="flex gap-2 flex-wrap">
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >React</span
+                            >
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >Tailwind</span
+                            >
+                          </div>
+                          <div class="flex gap-4 mt-6">
+                            <a
+                              href="#"
+                              class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              Live Demo →
+                            </a>
+                            <a
+                              href="#"
+                              class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              GitHub →
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div
+                        class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+                      >
+                        <div
+                          class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+                        >
+                          [Скриншот проекта 4]
+                        </div>
+                        <div class="p-6">
+                          <h3 class="text-xl font-semibold mb-2">
+                            Название проекта 2
+                          </h3>
+                          <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                            Краткое описание второго проекта.
+                          </p>
+                          <div class="flex gap-2 flex-wrap">
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >React</span
+                            >
+                            <span
+                              class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                              >Tailwind</span
+                            >
+                          </div>
+                          <div class="flex gap-4 mt-6">
+                            <a
+                              href="#"
+                              class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              Live Demo →
+                            </a>
+                            <a
+                              href="#"
+                              class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                            >
+                              GitHub →
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-slide">
-                    <div
-                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
-                    >
-                      <div
-                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
-                      >
-                        [Скриншот проекта 2]
-                      </div>
-                      <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">
-                          Название проекта 2
-                        </h3>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-                          Краткое описание второго проекта.
-                        </p>
-                        <div class="flex gap-2 flex-wrap">
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >React</span
-                          >
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >Tailwind</span
-                          >
-                        </div>
-                        <div class="flex gap-4 mt-6">
-                          <a
-                            href="#"
-                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            Live Demo →
-                          </a>
-                          <a
-                            href="#"
-                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            GitHub →
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div
-                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
-                    >
-                      <div
-                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
-                      >
-                        [Скриншот проекта 3]
-                      </div>
-                      <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">
-                          Название проекта 2
-                        </h3>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-                          Краткое описание второго проекта.
-                        </p>
-                        <div class="flex gap-2 flex-wrap">
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >React</span
-                          >
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >Tailwind</span
-                          >
-                        </div>
-                        <div class="flex gap-4 mt-6">
-                          <a
-                            href="#"
-                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            Live Demo →
-                          </a>
-                          <a
-                            href="#"
-                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            GitHub →
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div
-                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
-                    >
-                      <div
-                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
-                      >
-                        [Скриншот проекта 4]
-                      </div>
-                      <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">
-                          Название проекта 2
-                        </h3>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-                          Краткое описание второго проекта.
-                        </p>
-                        <div class="flex gap-2 flex-wrap">
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >React</span
-                          >
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >Tailwind</span
-                          >
-                        </div>
-                        <div class="flex gap-4 mt-6">
-                          <a
-                            href="#"
-                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            Live Demo →
-                          </a>
-                          <a
-                            href="#"
-                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            GitHub →
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div
-                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
-                    >
-                      <div
-                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
-                      >
-                        [Скриншот проекта 4]
-                      </div>
-                      <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">
-                          Название проекта 2
-                        </h3>
-                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-                          Краткое описание второго проекта.
-                        </p>
-                        <div class="flex gap-2 flex-wrap">
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >React</span
-                          >
-                          <span
-                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                            >Tailwind</span
-                          >
-                        </div>
-                        <div class="flex gap-4 mt-6">
-                          <a
-                            href="#"
-                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            Live Demo →
-                          </a>
-                          <a
-                            href="#"
-                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
-                          >
-                            GitHub →
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <!-- If we need navigation buttons -->
                 </div>
-                <!-- If we need navigation buttons -->
-            </div>
                 <div class="swiper-button-prev" id="prev1"></div>
                 <div class="swiper-button-next" id="next1"></div>
               </div>
-              <!-- swiper -->
-
+            </div>
+            <div
+              class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-10"
+            >
+              <span class="text-xs tracking-[3px] text-gray-500 font-mono"
+                >SCROLL TO EXPLORE</span
+              >
+              <div
+                class="w-px h-12 bg-gradient-to-b from-transparent via-violet-500 to-transparent mt-2"
+              ></div>
+            </div>
           </section>
           <!-- contact -->
-          <section id="contact" class="min-h-screen flex flex-col flex-1">
+          <section
+            id="contact"
+            class="h-[calc(100dvh-var(--header-height))] flex flex-col flex-1"
+          >
             <div class="container mx-auto my-auto px-6 max-w-4xl">
               <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-black mb-4">
@@ -544,7 +685,7 @@
                           <a
                             href="mailto:frontsonny@gmail.com"
                             class="text-lg text-violet-300 hover:text-violet-200 transition-colors"
-                          > 
+                          >
                             frontsonny@gmail.com
                           </a>
                         </div>

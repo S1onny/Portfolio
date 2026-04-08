@@ -50,12 +50,10 @@ const swiper = new Swiper(".swiper", {
 import Lenis from "lenis";
 
 const lenis = new Lenis({
-  duration: 1.65, // плавность
+  duration: 1.2,
   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smoothWheel: true,
-  smoothTouch: true,
-  wheelMultiplier: 1,
-  touchMultiplier: 2,
+  smoothTouch: false,
 });
 
 function raf(time) {
@@ -63,8 +61,6 @@ function raf(time) {
   requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
-
-console.log("✅ Lenis успешно запущен");
 
 // Плавный переход по ссылкам в навбаре
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -78,4 +74,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       });
     }
   });
+});
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+lenis.on("scroll", ScrollTrigger.update);
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
 });
