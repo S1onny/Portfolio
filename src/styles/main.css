@@ -30,3 +30,32 @@ html.lenis body {
 #scroll-container {
   overflow: visible !important;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-block: 40px !important;
+}
+
+.swiper-slide {
+  /* Начальное состояние: все слайды затемнены */
+  opacity: 0.6;
+  scale: 1;
+  transition: opacity 0.5s ease !important;
+  transition: scale 0.5s ease !important; /* Плавность */
+  filter: blur(1px); /* Дополнительный эффект размытия */
+}
+
+.swiper-slide-active {
+  /* Состояние активного слайда */
+  opacity: 1;
+  scale: 1.1;
+  filter: none;
+}
+
+#prev1 {
+  margin-left: -10%;
+}
+#next1 {
+  margin-right: -10%;
+}

@@ -17,15 +17,8 @@
           class="fixed justify-self-center top-0 left-0 right-0 z-50 bg-gray-400/20 rounded-xl container mt-3 border-solid border-white/20 border shadow-md shadow-white/15"
         >
           <div
-            class="max-full mx-auto px-6 lg:px-8 py-2 flex items-center justify-between"
+            class="max-full mx-auto px-6 lg:px-8 py-4 flex items-center justify-center"
           >
-            <a href="#About">
-              <img
-                src="/src/images/logo.jpg"
-                alt="Logo"
-                class="h-14 w-14 rounded"
-              />
-            </a>
             <ul class="hidden md:flex items-center gap-8 lg:gap-12">
               <li>
                 <a
@@ -70,7 +63,8 @@
       <!-- Единственный прокручиваемый слой -->
       <div id="scroll-container" class="h-full pt-24 overflow-auto">
         <!-- Container для ограничения ширины -->
-        <div class="container mx-auto px-4 max-w-7xl">
+        <div class="container mx-auto">
+          <!-- About -->
           <section
             id="About"
             class="min-h-screen flex items-center relative overflow-hidden"
@@ -159,7 +153,7 @@
               </div>
             </div>
           </section>
-
+          <!-- skills -->
           <section
             id="skills"
             class="min-h-screen flex items-center justify-center"
@@ -268,7 +262,7 @@
               </div>
             </div>
           </section>
-
+          <!--  projects -->
           <section
             id="projects"
             class="min-h-screen flex items-center justify-center"
@@ -282,140 +276,237 @@
                 </span>
               </h2>
 
-              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Карточка проекта 1 -->
-                <div
-                  class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
-                >
-                  <div
-                    class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
-                  >
-                    [Скриншот проекта 1]
-                  </div>
-                  <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">
-                      Название проекта 1
-                    </h3>
-                    <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-                      Краткое описание. Что делал, какие технологии использовал,
-                      какой был вызов.
-                    </p>
-                    <div class="flex gap-2 flex-wrap">
-                      <span
-                        class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                        >Tailwind</span
+              <div class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl py-8 md:py-12 lg:py-16 shadow-2xl shadow-violet-950/40">
+            <div class="swiper flex flex-row">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div
+                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group my-auto"
+                    >
+                      <div
+                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
                       >
-                      <span
-                        class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                        >JavaScript</span
-                      >
+                        [Скриншот проекта 1]
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                          Название проекта 1
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                          Краткое описание. Что делал, какие технологии
+                          использовал, какой был вызов.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >Tailwind</span
+                          >
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >JavaScript</span
+                          >
+                        </div>
+                        <div class="flex gap-4 mt-6">
+                          <a
+                            href="#"
+                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            Live Demo →
+                          </a>
+                          <a
+                            href="#"
+                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            GitHub →
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <div class="flex gap-4 mt-6">
-                      <a
-                        href="#"
-                        class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+                    >
+                      <div
+                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
                       >
-                        Live Demo →
-                      </a>
-                      <a
-                        href="#"
-                        class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                        [Скриншот проекта 2]
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                          Название проекта 2
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                          Краткое описание второго проекта.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >React</span
+                          >
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >Tailwind</span
+                          >
+                        </div>
+                        <div class="flex gap-4 mt-6">
+                          <a
+                            href="#"
+                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            Live Demo →
+                          </a>
+                          <a
+                            href="#"
+                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            GitHub →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+                    >
+                      <div
+                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
                       >
-                        GitHub →
-                      </a>
+                        [Скриншот проекта 3]
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                          Название проекта 2
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                          Краткое описание второго проекта.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >React</span
+                          >
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >Tailwind</span
+                          >
+                        </div>
+                        <div class="flex gap-4 mt-6">
+                          <a
+                            href="#"
+                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            Live Demo →
+                          </a>
+                          <a
+                            href="#"
+                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            GitHub →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+                    >
+                      <div
+                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+                      >
+                        [Скриншот проекта 4]
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                          Название проекта 2
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                          Краткое описание второго проекта.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >React</span
+                          >
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >Tailwind</span
+                          >
+                        </div>
+                        <div class="flex gap-4 mt-6">
+                          <a
+                            href="#"
+                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            Live Demo →
+                          </a>
+                          <a
+                            href="#"
+                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            GitHub →
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div
+                      class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
+                    >
+                      <div
+                        class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
+                      >
+                        [Скриншот проекта 4]
+                      </div>
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">
+                          Название проекта 2
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4 line-clamp-3">
+                          Краткое описание второго проекта.
+                        </p>
+                        <div class="flex gap-2 flex-wrap">
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >React</span
+                          >
+                          <span
+                            class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
+                            >Tailwind</span
+                          >
+                        </div>
+                        <div class="flex gap-4 mt-6">
+                          <a
+                            href="#"
+                            class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            Live Demo →
+                          </a>
+                          <a
+                            href="#"
+                            class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
+                          >
+                            GitHub →
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-
-                <!-- Карточка проекта 2 (повтори блок, измени текст и скриншот) -->
-                <div
-                  class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
-                >
-                  <div
-                    class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
-                  >
-                    [Скриншот проекта 2]
-                  </div>
-                  <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">
-                      Название проекта 2
-                    </h3>
-                    <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-                      Краткое описание второго проекта.
-                    </p>
-                    <div class="flex gap-2 flex-wrap">
-                      <span
-                        class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                        >React</span
-                      >
-                      <span
-                        class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                        >Tailwind</span
-                      >
-                    </div>
-                    <div class="flex gap-4 mt-6">
-                      <a
-                        href="#"
-                        class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
-                      >
-                        Live Demo →
-                      </a>
-                      <a
-                        href="#"
-                        class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
-                      >
-                        GitHub →
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Карточка проекта 3 -->
-                <div
-                  class="bg-gray-900/30 backdrop-blur-xl border border-gray-700/30 rounded-3xl overflow-hidden shadow-xl shadow-violet-950/20 group hover:scale-[1.02] transition-all duration-300"
-                >
-                  <div
-                    class="h-52 bg-gray-800 flex items-center justify-center text-gray-500 text-sm"
-                  >
-                    [Скриншот проекта 3]
-                  </div>
-                  <div class="p-6">
-                    <h3 class="text-xl font-semibold mb-2">
-                      Название проекта 3
-                    </h3>
-                    <p class="text-gray-400 text-sm mb-4 line-clamp-3">
-                      Краткое описание третьего проекта.
-                    </p>
-                    <div class="flex gap-2 flex-wrap">
-                      <span
-                        class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                        >Vite</span
-                      >
-                      <span
-                        class="text-xs px-3 py-1 bg-violet-900/40 text-violet-300 rounded-full"
-                        >JavaScript</span
-                      >
-                    </div>
-                    <div class="flex gap-4 mt-6">
-                      <a
-                        href="#"
-                        class="text-violet-400 hover:text-violet-300 text-sm font-medium flex items-center gap-1"
-                      >
-                        Live Demo →
-                      </a>
-                      <a
-                        href="#"
-                        class="text-gray-400 hover:text-gray-300 text-sm font-medium flex items-center gap-1"
-                      >
-                        GitHub →
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <!-- If we need navigation buttons -->
             </div>
-          </section>
+                <div class="swiper-button-prev" id="prev1"></div>
+                <div class="swiper-button-next" id="next1"></div>
+              </div>
+              <!-- swiper -->
 
+          </section>
+          <!-- contact -->
           <section id="contact" class="min-h-screen flex flex-col flex-1">
             <div class="container mx-auto my-auto px-6 max-w-4xl">
               <div class="text-center mb-16">
@@ -451,10 +542,10 @@
                         <div>
                           <p class="text-sm text-gray-400">Email</p>
                           <a
-                            href="mailto:твой@email.com"
+                            href="mailto:frontsonny@gmail.com"
                             class="text-lg text-violet-300 hover:text-violet-200 transition-colors"
-                          >
-                            твой@email.com
+                          > 
+                            frontsonny@gmail.com
                           </a>
                         </div>
                       </div>
@@ -467,7 +558,7 @@
                         </div>
                         <div>
                           <p class="text-sm text-gray-400">Локация</p>
-                          <p class="text-lg">Хельсинки, Финляндия</p>
+                          <p class="text-lg">Россия</p>
                         </div>
                       </div>
 
@@ -483,7 +574,7 @@
                             href="https://t.me/твой_ник"
                             class="text-lg text-violet-300 hover:text-violet-200 transition-colors"
                           >
-                            @твой_ник
+                            @Sonny2213
                           </a>
                         </div>
                       </div>

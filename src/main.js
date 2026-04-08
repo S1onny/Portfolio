@@ -5,23 +5,47 @@ import Swiper from "swiper/bundle";
 // import styles bundle
 import "swiper/css/bundle";
 
-// init Swiper:
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   direction: "vertical",
-//   loop: true,
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 2.2,
+  centeredSlides: true,
+  spaceBetween: 48,
+  watchSlidesProgress: true,
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 0,
+    slideShadows: false,
+    depth: 0,
+  },
 
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
+  speed: 800,
+  grabCursor: true,
+  // slideToClickedSlide: true,
+  // loopedSlides: 3,
+  // breakpoints: {
+  //   320: {
+  //     slidesPerView: 1.2,
+  //     spaceBetween: 16,
+  //   },
+  //   768: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 24,
+  //   },
+  // },
 
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
 
 import Lenis from "lenis";
 
@@ -50,7 +74,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     if (target) {
       lenis.scrollTo(target, {
         offset: -90,
-        duration: 2.0,
+        duration: 1.5,
       });
     }
   });
