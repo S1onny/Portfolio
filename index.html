@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sonny — Frontend Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body class="antialiased bg-gray-950 text-gray-100">
+    <div
+      id="tsparticles"
+      class="fixed inset-0 z-[-3] pointer-events-none"
+    ></div>
     <!-- Lenis + GSAP главный контейнер -->
     <div id="app" class="h-screen overflow-hidden">
-      <!-- Навбар фиксированный -->
       <header
         class="fixed top-0 left-0 right-0 z-50 bg-gray-950/80 backdrop-blur-xl border-b border-gray-700/30"
       >
@@ -19,39 +26,41 @@
           <div
             class="max-full mx-auto px-6 lg:px-8 py-4 flex items-center justify-center"
           >
-            <ul class="hidden md:flex items-center gap-8 lg:gap-12">
+            <ul
+              class="hidden md:flex items-center gap-8 lg:gap-16 font-heading"
+            >
               <li>
                 <a
                   href="#Hero"
-                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-bold transition-colors duration-300"
                   >Home</a
                 >
               </li>
               <li>
                 <a
                   href="#About"
-                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-bold transition-colors duration-300"
                   >About</a
                 >
               </li>
               <li>
                 <a
                   href="#skills"
-                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-bold transition-colors duration-300"
                   >Skills</a
                 >
               </li>
               <li>
                 <a
                   href="#projects"
-                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-bold transition-colors duration-300"
                   >Projects</a
                 >
               </li>
               <li>
                 <a
                   href="#contact"
-                  class="text-gray-300 hover:text-violet-300 text-3xl font-medium transition-colors duration-300"
+                  class="text-gray-300 hover:text-violet-300 text-3xl font-bold transition-colors duration-300"
                   >Contact</a
                 >
               </li>
@@ -67,40 +76,39 @@
         </nav>
       </header>
 
-      <!-- Единственный прокручиваемый слой -->
-      <div id="scroll-container" class="h-full pt-24 overflow-auto">
-        <!-- Container для ограничения ширины -->
+      <div id="scroll-container" class="h-full overflow-auto">
         <div class="container mx-auto">
           <!-- HERO SECTION -->
           <section
             id="Hero"
-            class="h-[calc(100dvh-var(--header-height))] flex items-center relative"
+            class="h-dvh flex items-center relative section-content"
           >
             <div class="w-full mx-auto px-6 lg:px-8">
               <div
                 class="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-16 lg:gap-20 h-full"
               >
-                <!-- Левая часть — текст -->
                 <div
                   class="flex-1 text-center lg:text-left max-w-lg lg:max-w-none"
                 >
                   <h1
-                    class="text-5xl sm:text-6xl lg:text-9xl font-bold leading-none tracking-tight text-white"
+                    class="text-5xl sm:text-6xl lg:text-9xl font-bold leading-none tracking-tight text-white font-heading"
                   >
                     Привет,<br />
                     Я
                     <span
-                      class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent"
+                      class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent font-heading"
                       >Михаил</span
                     >.
                   </h1>
 
-                  <p class="mt-4 text-5xl sm:text-6xl text-gray-300 font-light">
+                  <p
+                    class="mt-4 text-5xl sm:text-6xl text-gray-300 font-light font-heading"
+                  >
                     Frontend Developer
                   </p>
 
                   <p
-                    class="mt-8 text-base sm:text-2xl max-w-2/3 text-gray-400 leading-relaxed"
+                    class="mt-8 text-base sm:text-2xl max-w-2/3 text-gray-400 leading-relaxed font-sans"
                   >
                     Создаю современные цифровые интерфейсы, которые не просто
                     красивы, а действительно удобны, быстры и приносят
@@ -109,18 +117,18 @@
 
                   <!-- Кнопки -->
                   <div
-                    class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                    class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start font-heading"
                   >
                     <a
                       href="#projects"
-                      class="px-11 py-5.5 bg-violet-600 hover:bg-violet-700 transition-all rounded-2xl font-medium text-2xl text-center"
+                      class="font-sans px-11 py-5.5 bg-violet-600 hover:bg-violet-700 transition-all rounded-2xl font-medium text-2xl text-center"
                     >
                       Посмотреть проекты
                     </a>
 
                     <a
                       href="#contact"
-                      class="px-11 py-5.5 border border-violet-400/70 hover:bg-violet-500/10 hover:border-violet-400 transition-all rounded-2xl font-medium text-2xl text-center"
+                      class="font-sans px-11 py-5.5 border border-violet-400/70 hover:bg-violet-500/10 hover:border-violet-400 transition-all rounded-2xl font-medium text-2xl text-center"
                     >
                       Связаться со мной
                     </a>
@@ -128,7 +136,7 @@
 
                   <!-- Теги навыков -->
                   <div
-                    class="mt-12 flex flex-wrap gap-3 justify-center lg:justify-start"
+                    class="mt-12 flex flex-wrap gap-3 justify-center lg:justify-start font-heading"
                   >
                     <span
                       class="px-5 py-2 text-sm bg-white/5 border border-white/10 rounded-full text-gray-400"
@@ -152,7 +160,7 @@
                 <!-- Правая часть — аватарка -->
                 <div class="shrink-0 relative">
                   <div
-                    class="w-72 h-72 sm:w-100 sm:h-100 mx-auto flex items-center justify-center relative"
+                    class="w-72 h-72 sm:w-150 sm:h-150 mx-auto flex items-center justify-center relative"
                   >
                     <!-- Неоновое свечение -->
                     <div
@@ -161,7 +169,7 @@
 
                     <!-- Круг аватарки -->
                     <div
-                      class="w-48 h-48 md:w-64 md:h-64 lg:w-100 lg:h-100 rounded-full overflow-hidden border-4 border-violet-500/50 shadow-xl shadow-violet-900/50 shrink-0 flex items-center justify-center"
+                      class="w-48 h-48 md:w-64 md:h-64 lg:w-150 lg:h-150 rounded-full overflow-hidden border-4 border-violet-500/50 shadow-xl shadow-violet-900/50 shrink-0 flex items-center justify-center"
                     >
                       <img
                         src="/src/images/avaPng.png"
@@ -194,17 +202,17 @@
             </div>
           </section>
           <!-- ABOUT SECTION -->
-          <section id="About" class="py-24">
+          <section id="About" class="h-dvh flex items-center">
             <div
-              class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl shadow-violet-950/40"
+              class="section-content relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl shadow-violet-950/40"
             >
               <div class="text-center mb-16">
                 <h2
-                  class="text-4xl lg:text-5xl font-bold tracking-tight text-white"
+                  class="text-4xl lg:text-5xl font-bold tracking-tight text-white font-heading"
                 >
                   Обо мне
                 </h2>
-                <div class="h-px w-16 bg-violet-500 mx-auto mt-6"></div>
+                <div class="h-px w-16 bg-violet-500 mx-auto mt-4"></div>
               </div>
 
               <div
@@ -273,126 +281,145 @@
           <!-- skills -->
           <section
             id="skills"
-            class="h-[calc(100dvh-var(--header-height))] flex items-center justify-center relative"
+            class="h-dvh flex items-center justify-center relative section-content"
           >
             <div class="w-full">
-              <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-black mb-4">
-                  <span
-                    class="bg-gradient-to-r from-violet-400 to-purple-600 bg-clip-text text-transparent"
-                  >
-                    Skills
-                  </span>
-                </h2>
-                <p class="text-gray-400 text-lg">
-                  Технологии, с которыми я работаю
-                </p>
-              </div>
-
               <!-- Общая большая стеклянная обертка -->
               <div
                 class="relative z-10 mx-auto w-full bg-gray-900/25 backdrop-blur-2xl border border-gray-700/30 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl shadow-violet-950/40"
               >
+                <div class="text-center mb-16">
+                  <h2
+                    class="text-4xl lg:text-5xl font-bold tracking-tight text-white font-heading"
+                  >
+                    Навыки
+                  </h2>
+                  <div class="h-px w-16 bg-violet-500 mx-auto mt-4"></div>
+                  <p class="text-gray-400 text-lg">
+                    Технологии, с которыми я работаю
+                  </p>
+                </div>
                 <ul
-                  class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                  class="grid grid-cols-2 md:grid-cols-4 gap-6"
+                  id="skills-grid"
                 >
                   <li
-                    class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+                    class="skill-card group bg-[#111118] border border-white/10 rounded-3xl p-8 hover:-translate-y-4 hover:scale-[1.04] hover:border-violet-400/60 hover:shadow-[0_25px_50px_-12px_rgb(168,85,247,0.3)] transition-all duration-500 ease-out"
                   >
-                    <div class="text-4xl mb-4">🌐</div>
-                    <h3 class="font-semibold text-2xl">HTML5</h3>
-                    <p class="text-gray-400 text-xl mt-2">
+                    <div
+                      class="text-5xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_20px_rgb(168,85,247)]"
+                    >
+                      🌐
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">HTML5</h3>
+                    <p class="text-gray-400 text-sm">
                       Семантическая вёрстка и доступность
                     </p>
                   </li>
 
                   <li
-                    class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+                    class="skill-card group bg-[#111118] border border-white/10 rounded-3xl p-8 hover:-translate-y-4 hover:scale-[1.04] hover:border-violet-400/60 hover:shadow-[0_25px_50px_-12px_rgb(168,85,247,0.3)] transition-all duration-500 ease-out"
                   >
-                    <div class="text-4xl mb-4">🎨</div>
-                    <h3 class="font-semibold text-2xl">CSS3 / SCSS</h3>
-                    <p class="text-gray-400 text-xl mt-2">
+                    <div
+                      class="text-5xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_20px_rgb(168,85,247)]"
+                    >
+                      🎨
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">CSS3 / SCSS</h3>
+                    <p class="text-gray-400 text-sm">
                       Препроцессоры и современный CSS
                     </p>
                   </li>
 
                   <li
-                    class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+                    class="skill-card group bg-[#111118] border border-white/10 rounded-3xl p-8 hover:-translate-y-4 hover:scale-[1.04] hover:border-violet-400/60 hover:shadow-[0_25px_50px_-12px_rgb(168,85,247,0.3)] transition-all duration-500 ease-out"
                   >
-                    <div class="text-4xl mb-4">🟨</div>
-                    <h3 class="font-semibold text-2xl">JavaScript</h3>
-                    <p class="text-gray-400 text-xl mt-2">
+                    <div
+                      class="text-5xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_20px_rgb(168,85,247)]"
+                    >
+                      📦
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">JavaScript</h3>
+                    <p class="text-gray-400 text-sm">
                       ES6+, DOM, асинхронность, API
                     </p>
                   </li>
 
                   <li
-                    class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+                    class="skill-card group bg-[#111118] border border-white/10 rounded-3xl p-8 hover:-translate-y-4 hover:scale-[1.04] hover:border-violet-400/60 hover:shadow-[0_25px_50px_-12px_rgb(168,85,247,0.3)] transition-all duration-500 ease-out"
                   >
-                    <div class="text-4xl mb-4">🌬️</div>
-                    <h3 class="font-semibold text-2xl">Tailwind CSS</h3>
-                    <p class="text-gray-400 text-xl mt-2">
-                      Utility-first подход
-                    </p>
+                    <div
+                      class="text-5xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_20px_rgb(168,85,247)]"
+                    >
+                      🌬️
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Tailwind CSS</h3>
+                    <p class="text-gray-400 text-sm">Utility-first подход</p>
                   </li>
 
                   <li
-                    class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+                    class="skill-card group bg-[#111118] border border-white/10 rounded-3xl p-8 hover:-translate-y-4 hover:scale-[1.04] hover:border-violet-400/60 hover:shadow-[0_25px_50px_-12px_rgb(168,85,247,0.3)] transition-all duration-500 ease-out"
                   >
-                    <div class="text-4xl mb-4">⚡</div>
-                    <h3 class="font-semibold text-2xl">Vite</h3>
-                    <p class="text-gray-400 text-xl mt-2">
+                    <div
+                      class="text-5xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_20px_rgb(168,85,247)]"
+                    >
+                      ⚡
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Vite</h3>
+                    <p class="text-gray-400 text-sm">
                       Быстрая сборка и разработка
                     </p>
                   </li>
 
                   <li
-                    class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+                    class="skill-card group bg-[#111118] border border-white/10 rounded-3xl p-8 hover:-translate-y-4 hover:scale-[1.04] hover:border-violet-400/60 hover:shadow-[0_25px_50px_-12px_rgb(168,85,247,0.3)] transition-all duration-500 ease-out"
                   >
-                    <div class="text-4xl mb-4">🧹</div>
-                    <h3 class="font-semibold text-2xl">ESLint + Prettier</h3>
-                    <p class="text-gray-400 text-xl mt-2">
+                    <div
+                      class="text-5xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_20px_rgb(168,85,247)]"
+                    >
+                      🛠️
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">
+                      ESLint + Prettier
+                    </h3>
+                    <p class="text-gray-400 text-sm">
                       Качество кода и форматирование
                     </p>
                   </li>
 
                   <li
-                    class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+                    class="skill-card group bg-[#111118] border border-white/10 rounded-3xl p-8 hover:-translate-y-4 hover:scale-[1.04] hover:border-violet-400/60 hover:shadow-[0_25px_50px_-12px_rgb(168,85,247,0.3)] transition-all duration-500 ease-out"
                   >
-                    <div class="text-4xl mb-4">📦</div>
-                    <h3 class="font-semibold text-2xl">Git & GitHub</h3>
-                    <p class="text-gray-400 text-xl mt-2">
-                      Версионный контроль
-                    </p>
+                    <div
+                      class="text-5xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_20px_rgb(168,85,247)]"
+                    >
+                      📦
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Git & GitHub</h3>
+                    <p class="text-gray-400 text-sm">Версионный контроль</p>
                   </li>
 
                   <li
-                    class="bg-gray-950/60 border border-gray-700/50 hover:border-violet-500/60 rounded-2xl p-6 transition-all hover:-translate-y-1"
+                    class="skill-card group bg-[#111118] border border-white/10 rounded-3xl p-8 hover:-translate-y-4 hover:scale-[1.04] hover:border-violet-400/60 hover:shadow-[0_25px_50px_-12px_rgb(168,85,247,0.3)] transition-all duration-500 ease-out"
                   >
-                    <div class="text-4xl mb-4">🔧</div>
-                    <h3 class="font-semibold text-2xl">WordPress</h3>
-                    <p class="text-gray-400 text-xl mt-2">
+                    <div
+                      class="text-5xl mb-6 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 group-hover:drop-shadow-[0_0_20px_rgb(168,85,247)]"
+                    >
+                      🔧
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">WordPress</h3>
+                    <p class="text-gray-400 text-sm">
                       Создание и кастомизация сайтов
                     </p>
                   </li>
                 </ul>
               </div>
             </div>
-            <div
-              class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-10"
-            >
-              <span class="text-xs tracking-[3px] text-gray-500 font-mono"
-                >SCROLL TO EXPLORE</span
-              >
-              <div
-                class="w-px h-12 bg-gradient-to-b from-transparent via-violet-500 to-transparent mt-2"
-              ></div>
-            </div>
           </section>
           <!--  projects -->
           <section
             id="projects"
-            class="h-[calc(100dvh-var(--header-height))] flex items-center justify-center relative"
+            class="h-dvh flex items-center justify-center relative section-content"
           >
             <div class="container mx-auto px-6 max-w-6xl">
               <h2 class="text-4xl md:text-5xl font-black text-center mb-16">
@@ -647,7 +674,7 @@
           <!-- contact -->
           <section
             id="contact"
-            class="h-[calc(100dvh-var(--header-height))] flex flex-col flex-1"
+            class="h-dvh flex flex-col flex-1 section-content"
           >
             <div class="container mx-auto my-auto px-6 max-w-4xl">
               <div class="text-center mb-16">
@@ -878,6 +905,34 @@
         </div>
       </div>
     </div>
+
+    <!-- Custom Neon Cursor + Trail -->
+    <div
+      id="custom-cursor"
+      class="fixed w-8 h-8 pointer-events-none z-[99999] hidden lg:block"
+    >
+      <!-- Основной курсор -->
+      <div
+        class="relative w-full h-full transition-all duration-300 ease-out"
+        id="cursor-main"
+      >
+        <!-- Внешний неоновый круг -->
+        <div
+          class="absolute inset-0 border-2 border-violet-400 rounded-full shadow-[0_0_20px_#a855f7,0_0_40px_#c026d3] transition-all duration-300"
+        ></div>
+
+        <!-- Центральная точка -->
+        <div
+          class="absolute top-1/2 left-1/2 w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-violet-300 rounded-full shadow-[0_0_10px_#e0bbff]"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Trail Container -->
+    <div
+      id="cursor-trail"
+      class="fixed inset-0 pointer-events-none z-[99998] hidden lg:block"
+    ></div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

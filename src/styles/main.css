@@ -1,15 +1,88 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+@theme {
+  --default-font-family: "Inter", system-ui, sans-serif;
+  --font-heading: "Exo 2", sans-serif;
+}
 @layer base {
   body {
     @apply bg-linear-to-br from-[#03010c] via-[#0a062b] to-[#07072c] bg-fixed min-h-screen text-gray-100 antialiased;
     position: relative;
   }
+}
 
-  /* body::before {
-    content: "";
-    @apply absolute inset-0 pointer-events-none z-[-1];
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.015'/%3E%3C/svg%3E");
-  } */
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Основной фон с неоновой сеткой */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background-image:
+    linear-gradient(to right, rgba(168, 85, 247, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 85, 247, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px; /* размер ячеек сетки */
+  pointer-events: none;
+}
+
+/* Дополнительный мягкий градиент для глубины */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 50% 30%,
+    rgba(139, 92, 246, 0.08) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* Полностью скрываем стандартный курсор */
+*,
+body,
+html {
+  cursor: none !important;
+}
+
+/* Основной курсор */
+#custom-cursor {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* плавное увеличение */
+}
+
+#cursor-main {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Trail dots */
+.trail-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #c026d3;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 12px #a855f7;
+  opacity: 0.6;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+/* Дополнительно для интерактивных элементов */
+a,
+button,
+input,
+textarea,
+[role="button"],
+label {
+  cursor: none !important;
 }
 :root {
   --header-height: 80px;
