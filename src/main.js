@@ -6,7 +6,6 @@ import Swiper from "swiper/bundle";
 import "swiper/css/bundle";
 
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
   direction: "horizontal",
   loop: true,
   slidesPerView: 2.2,
@@ -22,36 +21,59 @@ const swiper = new Swiper(".swiper", {
 
   speed: 800,
   grabCursor: true,
-  // slideToClickedSlide: true,
-  // loopedSlides: 3,
-  // breakpoints: {
-  //   320: {
-  //     slidesPerView: 1.2,
-  //     spaceBetween: 16,
-  //   },
-  //   768: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 24,
-  //   },
-  // },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
 });
+
+// Инициализация gsap and lenis
 
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Бургер меню
+
+const burgerBtn = document.getElementById("burger-btn");
+const burgerFull = document.getElementById("burger-btn-opened");
+const content = document.getElementById("scroll-container");
+
+burgerBtn.addEventListener("click", () => {
+  gsap.to("#nav", {
+    y: "45vh",
+    onComplete: () => {
+      gsap.to("#nav", {
+        scaleY: 0,
+        duration: 0.2,
+      });
+      gsap.to("#nav__burger", {
+        delay: 0.2,
+        scaleY: 1,
+      });
+    },
+  });
+});
+
+burgerFull.addEventListener("click", () => {
+  gsap.to("#nav__burger", {
+    scaleY: 0,
+    duration: 0.3,
+  });
+  gsap.to("#nav", {
+    delay: 0.3,
+    duration: 0.2,
+    scaleY: 1,
+    onComplete: () => {
+      gsap.to("#nav", {
+        y: "0",
+      });
+    },
+  });
+});
 
 // ====================== LENIS ======================
 const lenis = new Lenis({
@@ -189,51 +211,75 @@ const cursorMain = document.getElementById("cursor-main");
 const trailContainer = document.getElementById("cursor-trail");
 
 let trailDots = [];
-const maxTrail = 12; // количество точек в следе
+const maxTrail = 12;
 
-document.addEventListener("mousemove", (e) => {
-  // Двигаем основной курсор
-  cursor.style.left = `${e.clientX - 16}px`;
-  cursor.style.top = `${e.clientY - 16}px`;
+// Media Query — курсор работает только на экранах от 1024px
+const desktopMedia = window.matchMedia("(min-width: 1024px)");
+
+let isInitialized = false;
+
+function initCursor() {
+  if (isInitialized || !cursor || !cursorMain) return;
+
   cursor.classList.remove("hidden");
 
-  // Создаём точку следа
-  const dot = document.createElement("div");
-  dot.className = "trail-dot";
-  dot.style.left = `${e.clientX}px`;
-  dot.style.top = `${e.clientY}px`;
-  trailContainer.appendChild(dot);
-  trailDots.push(dot);
+  // Движение основного курсора
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = `${e.clientX - 16}px`;
+    cursor.style.top = `${e.clientY - 16}px`;
 
-  // Удаляем старые точки
-  if (trailDots.length > maxTrail) {
-    const oldDot = trailDots.shift();
-    oldDot.style.opacity = "0";
-    setTimeout(() => oldDot.remove(), 600);
-  }
+    // Создаём точку следа
+    const dot = document.createElement("div");
+    dot.className = "trail-dot";
+    dot.style.left = `${e.clientX}px`;
+    dot.style.top = `${e.clientY}px`;
+    trailContainer.appendChild(dot);
+    trailDots.push(dot);
 
-  // Плавно уменьшаем и убираем след
-  setTimeout(() => {
-    if (dot.parentNode) {
-      dot.style.opacity = "0";
-      dot.style.transform = "scale(0.3)";
+    if (trailDots.length > maxTrail) {
+      const oldDot = trailDots.shift();
+      oldDot.style.opacity = "0";
+      setTimeout(() => oldDot.remove(), 600);
     }
-  }, 50);
-});
 
-// Плавное увеличение при наведении
-const interactive = document.querySelectorAll(
-  'a, button, .hoverable, [role="button"], input, textarea',
-);
-
-interactive.forEach((el) => {
-  el.addEventListener("mouseenter", () => {
-    cursorMain.style.transform = "scale(1.85)";
+    setTimeout(() => {
+      if (dot.parentNode) {
+        dot.style.opacity = "0";
+        dot.style.transform = "scale(0.3)";
+      }
+    }, 50);
   });
 
-  el.addEventListener("mouseleave", () => {
-    cursorMain.style.transform = "scale(1)";
+  // Плавное увеличение при наведении
+  const interactive = document.querySelectorAll(
+    'a, button, .hoverable, [role="button"], input, textarea',
+  );
+
+  interactive.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      cursorMain.style.transform = "scale(1.85)";
+    });
+
+    el.addEventListener("mouseleave", () => {
+      cursorMain.style.transform = "scale(1)";
+    });
   });
+
+  isInitialized = true;
+}
+
+// Инициализация при загрузке
+if (desktopMedia.matches) {
+  initCursor();
+}
+
+// Следим за изменением размера окна
+desktopMedia.addEventListener("change", (e) => {
+  if (e.matches) {
+    initCursor(); // включаем курсор
+  } else {
+    if (cursor) cursor.classList.add("hidden"); // скрываем на мобильных
+  }
 });
 
 // партиклы
